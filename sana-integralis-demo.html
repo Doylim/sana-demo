@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana Integralis – Ganzheitliche Physiotherapie Heidelberg</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f5f0e8;
+  --warm: #ede6d6;
+  --sand: #d4c9b0;
+  --terracotta: #b87355;
+  --terra-light: #c98a6a;
+  --sage: #7a8c74;
+  --sage-light: #9aac94;
+  --dark: #2a2420;
+  --mid: #5a4f45;
+  --text: #3a3028;
+  --muted: #8a7d72;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(245,240,232,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(180,160,130,0.2);
+  transition: all 0.3s;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--dark);
+  letter-spacing: 0.02em;
+}
+
+.nav-logo span {
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--mid);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--terracotta); }
+
+.nav-cta {
+  background: var(--terracotta);
+  color: white !important;
+  padding: 10px 22px;
+  border-radius: 2px;
+  font-size: 12px !important;
+  letter-spacing: 0.12em !important;
+  transition: background 0.2s !important;
+}
+
+.nav-cta:hover { background: var(--dark) !important; color: white !important; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 80px;
+}
+
+.hero-left {
+  padding: 80px 48px 80px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-tag {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-tag::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--terracotta);
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--dark);
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.hero-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--mid);
+  max-width: 420px;
+  margin-bottom: 44px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn-primary {
+  background: var(--dark);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: 2px solid var(--dark);
+}
+
+.btn-primary:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+.btn-secondary {
+  color: var(--mid);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+
+.btn-secondary:hover { color: var(--terracotta); }
+
+.hero-stats {
+  margin-top: 64px;
+  display: flex;
+  gap: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--sand);
+}
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--dark);
+  display: block;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-right {
+  background: var(--warm);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-area {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 30% 60%, rgba(184,115,85,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(122,140,116,0.15) 0%, transparent 60%);
+}
+
+.hero-visual {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  padding: 48px;
+}
+
+.hero-badge {
+  background: white;
+  border-radius: 3px;
+  padding: 20px 28px;
+  box-shadow: 0 8px 40px rgba(42,36,32,0.1);
+  max-width: 280px;
+  align-self: flex-start;
+  margin-top: 40px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.badge-label {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 8px;
+}
+
+.badge-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.badge-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--mid);
+}
+
+.slot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sage-light);
+  flex-shrink: 0;
+}
+
+.slot-dot.taken { background: var(--sand); }
+
+.hero-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--terracotta), var(--terra-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  margin-bottom: 40px;
+  opacity: 0.85;
+}
+
+.circle-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* ── PHILOSOPHY ── */
+.philosophy {
+  padding: 120px 64px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: center;
+  background: var(--dark);
+  color: white;
+}
+
+.phil-left {
+  position: relative;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--terracotta);
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 300;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 28px;
+}
+
+h2 em { font-style: italic; color: var(--terra-light); }
+
+.phil-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  border-left: 2px solid var(--terracotta);
+  padding-left: 24px;
+  margin-top: 32px;
+}
+
+.phil-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.phil-card {
+  background: rgba(255,255,255,0.05);
+  padding: 32px;
+  transition: background 0.3s;
+  cursor: default;
+}
+
+.phil-card:hover { background: rgba(255,255,255,0.09); }
+
+.phil-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.phil-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.phil-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── LEISTUNGEN ── */
+.leistungen {
+  padding: 120px 64px;
+  background: var(--cream);
+}
+
+.section-header {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.section-header .section-label { margin-bottom: 0; }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 300;
+  color: var(--dark);
+  line-height: 1.1;
+}
+
+.section-title em { font-style: italic; color: var(--terracotta); }
+
+.leistungen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.leistung-card {
+  background: var(--warm);
+  padding: 40px 36px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.leistung-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--terracotta);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+.leistung-card:hover::before { transform: scaleX(1); }
+.leistung-card:hover { background: white; }
+
+.leistung-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--sand);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.leistung-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.leistung-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ── BUCHUNG ── */
+.buchung {
+  padding: 120px 64px;
+  background: var(--warm);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.buchung-left h2 {
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.buchung-left p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--mid);
+  margin-bottom: 32px;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--mid);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.booking-form {
+  background: white;
+  padding: 40px;
+  border-radius: 3px;
+  box-shadow: 0 4px 40px rgba(42,36,32,0.08);
+}
+
+.form-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.form-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--sand);
+  border-radius: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+  background: var(--cream);
+  transition: border-color 0.2s;
+  outline: none;
+  appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--terracotta);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn-book {
+  width: 100%;
+  padding: 16px;
+  background: var(--terracotta);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.btn-book:hover { background: var(--dark); }
+
+/* ── TEAM ── */
+.team {
+  padding: 120px 64px;
+  background: var(--cream);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin-top: 64px;
+}
+
+.team-card {
+  background: var(--warm);
+  padding: 48px 40px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  transition: background 0.3s;
+}
+
+.team-card:hover { background: white; }
+
+.team-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sage), var(--sage-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.team-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 12px;
+  color: var(--terracotta);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.team-info p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark);
+  color: rgba(255,255,255,0.5);
+  padding: 60px 64px 40px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 48px;
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.footer-brand span { color: var(--terracotta); font-style: italic; }
+
+.footer-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.footer-h {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--terra-light); }
+
+.footer-bottom {
+  background: var(--dark);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+}
+
+.demo-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--terracotta);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+  z-index: 999;
+  letter-spacing: 0.03em;
+}
+
+.demo-banner strong { font-weight: 500; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { min-height: 300px; }
+  .hero-left { padding: 60px 24px 40px; }
+  .philosophy, .buchung { grid-template-columns: 1fr; padding: 80px 24px; }
+  .leistungen, .team { padding: 80px 24px; }
+  .leistungen-grid, .team-grid { grid-template-columns: 1fr; }
+  .phil-right { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; padding: 48px 24px 32px; }
+  .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; }
+  .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  🎨 <strong>Demo-Entwurf</strong> — So könnte Ihre neue Website aussehen · Erstellt von Norbert Sommer · Kontakt: [deine@mail.de]
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Sana <span>Integralis</span></div>
+  <ul class="nav-links">
+    <li><a href="#philosophie">Philosophie</a></li>
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#buchung" class="nav-cta">Termin buchen</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Physiotherapie · Heidelberg-Handschuhsheim</div>
+    <h1>Ganzheitlich.<br><em>Individuell.</em><br>Heilsam.</h1>
+    <p class="hero-text">
+      Wir verbinden klassische Physiotherapie mit ganzheitlichen Methoden — 
+      und nehmen uns die Zeit, die Sie als Mensch verdienen. 
+      In Heidelberg-Handschuhsheim, seit über 15 Jahren.
+    </p>
+    <div class="hero-actions">
+      <a href="#buchung" class="btn-primary">Termin online buchen</a>
+      <a href="#leistungen" class="btn-secondary">Leistungen entdecken →</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">15+</span>
+        <span class="stat-label">Jahre Erfahrung</span>
+      </div>
+      <div>
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Ganzheitlicher Ansatz</span>
+      </div>
+      <div>
+        <span class="stat-num">1:1</span>
+        <span class="stat-label">Persönliche Betreuung</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-area"></div>
+    <div class="hero-visual">
+      <div class="hero-badge">
+        <div class="badge-label">Nächste freie Termine</div>
+        <div class="badge-title">Online Buchung</div>
+        <div class="badge-slots">
+          <div class="slot"><span class="slot-dot"></span> Mo, 14. Apr · 09:00 Uhr · frei</div>
+          <div class="slot"><span class="slot-dot"></span> Mo, 14. Apr · 11:30 Uhr · frei</div>
+          <div class="slot"><span class="slot-dot taken"></span> Di, 15. Apr · 08:00 Uhr · belegt</div>
+          <div class="slot"><span class="slot-dot"></span> Di, 15. Apr · 15:00 Uhr · frei</div>
+        </div>
+      </div>
+      <div class="hero-circle">
+        <div class="circle-text">Körper &<br>Seele im<br>Einklang</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHIE -->
+<section class="philosophy" id="philosophie">
+  <div class="phil-left">
+    <div class="section-label">Unsere Philosophie</div>
+    <h2>Ein Umdenken<br>muss <em>stattfinden.</em></h2>
+    <div class="phil-quote">
+      „In unserer ersten Einheit werden Ziele und Wünsche, 
+      aber auch Defizite und Beschwerden klar formuliert."
+    </div>
+  </div>
+  <div class="phil-right">
+    <div class="phil-card">
+      <span class="phil-icon">🌿</span>
+      <h3>Ganzheitlich</h3>
+      <p>Wir behandeln nicht nur Symptome — wir verstehen den Menschen hinter der Diagnose.</p>
+    </div>
+    <div class="phil-card">
+      <span class="phil-icon">🤝</span>
+      <h3>Individuell</h3>
+      <p>Jeder Therapieplan wird persönlich auf Sie zugeschnitten. Keine Standardlösung.</p>
+    </div>
+    <div class="phil-card">
+      <span class="phil-icon">🏡</span>
+      <h3>Verwurzelt</h3>
+      <p>Als gebürtiger Heidelberger in den Räumen der Großväterbäckerei — Vertrauen seit Generationen.</p>
+    </div>
+    <div class="phil-card">
+      <span class="phil-icon">📈</span>
+      <h3>Fortbildung</h3>
+      <p>Jahrelange Weiterbildungen fließen in jede Behandlung ein — für Ihren bestmöglichen Therapieerfolg.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="leistungen" id="leistungen">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Was wir bieten</div>
+      <div class="section-title">Unsere <em>Leistungen</em></div>
+    </div>
+  </div>
+  <div class="leistungen-grid">
+    <div class="leistung-card">
+      <div class="leistung-num">01</div>
+      <h3>Manuelle Therapie</h3>
+      <p>Gezielte Behandlung von Gelenken, Muskeln und Faszien — für nachhaltige Schmerzfreiheit und Beweglichkeit.</p>
+    </div>
+    <div class="leistung-card">
+      <div class="leistung-num">02</div>
+      <h3>Krankengymnastik</h3>
+      <p>Klassische und moderne Techniken — abgestimmt auf Ihre individuellen Bedürfnisse und Therapieziele.</p>
+    </div>
+    <div class="leistung-card">
+      <div class="leistung-num">03</div>
+      <h3>Beckenboden-Training</h3>
+      <p>Gezielte Aktivierung Ihres Kraftzentrums — für Stabilität, Gesundheit und Lebensqualität bis ins hohe Alter.</p>
+    </div>
+    <div class="leistung-card">
+      <div class="leistung-num">04</div>
+      <h3>Rückentraining</h3>
+      <p>Funktionelles Training ganzer Muskelketten — weg vom isolierten Einzelmuskeltraining, hin zu echter Stärke.</p>
+    </div>
+    <div class="leistung-card">
+      <div class="leistung-num">05</div>
+      <h3>Babymassage-Kurse</h3>
+      <p>Sanfte Massageabläufe für Eltern und Baby — stärken Bindung, Immunsystem und natürliche Entwicklung.</p>
+    </div>
+    <div class="leistung-card">
+      <div class="leistung-num">06</div>
+      <h3>Personal Training</h3>
+      <p>Individuelles Training nach Ihrer Therapie — damit das Ergebnis bleibt und Sie dauerhaft aktiv bleiben.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BUCHUNG -->
+<section class="buchung" id="buchung">
+  <div class="buchung-left">
+    <div class="section-label">Termin vereinbaren</div>
+    <h2>Einfach.<br><em>Online.</em><br>Ohne Wartezeit.</h2>
+    <p>
+      Buchen Sie Ihren Termin bequem online — zu jeder Zeit, 
+      ohne Telefonwarteschleife. Wir bestätigen Ihre Anfrage 
+      innerhalb von 24 Stunden.
+    </p>
+    <div class="contact-items">
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <span>06221 / 599 76 40</span>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <span>info@sanaintegralis.de</span>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <span>Steubenstraße 20, 69121 Heidelberg-Handschuhsheim</span>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">💬</div>
+        <span>Auch per WhatsApp erreichbar</span>
+      </div>
+    </div>
+  </div>
+  <div class="booking-form">
+    <div class="form-title">Termin anfragen</div>
+    <div class="form-sub">Kostenlos & unverbindlich · Antwort innerhalb 24h</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Vorname</label>
+        <input type="text" placeholder="Maria">
+      </div>
+      <div class="form-group">
+        <label>Nachname</label>
+        <input type="text" placeholder="Mustermann">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Leistung</label>
+      <select>
+        <option>Manuelle Therapie</option>
+        <option>Krankengymnastik</option>
+        <option>Beckenboden-Training</option>
+        <option>Rückentraining</option>
+        <option>Babymassage-Kurs</option>
+        <option>Personal Training</option>
+        <option>Erstgespräch (kostenlos)</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Gewünschter Tag</label>
+        <input type="date">
+      </div>
+      <div class="form-group">
+        <label>Uhrzeit</label>
+        <select>
+          <option>Morgens (07–10 Uhr)</option>
+          <option>Vormittags (10–13 Uhr)</option>
+          <option>Nachmittags (13–17 Uhr)</option>
+          <option>Abends (17–20 Uhr)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Telefon</label>
+      <input type="tel" placeholder="06221 ...">
+    </div>
+    <div class="form-group">
+      <label>Kurze Beschreibung (optional)</label>
+      <textarea rows="3" placeholder="Beschreiben Sie kurz Ihr Anliegen..."></textarea>
+    </div>
+    <button class="btn-book">Termin anfragen →</button>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-label">Ihr Team</div>
+  <div class="section-title" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,54px);font-weight:300;color:var(--dark);margin-bottom:0;">
+    Menschen, <em style="font-style:italic;color:var(--terracotta);">die zuhören.</em>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">JA</div>
+      <div class="team-info">
+        <h3>Juliane Arbeiter</h3>
+        <div class="team-role">Physiotherapeutin · Inhaberin</div>
+        <p>Mit jahrelanger Fortbildungserfahrung und einem ganzheitlichen Verständnis von Körper und Geist begleitet Juliane ihre Patienten auf dem Weg zu nachhaltiger Gesundheit.</p>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar" style="background:linear-gradient(135deg,var(--terracotta),var(--terra-light))">JH</div>
+      <div class="team-info">
+        <h3>Jörg Huisken</h3>
+        <div class="team-role">Physiotherapeut · Inhaber</div>
+        <p>Als gebürtiger Heidelberger hat Jörg tief verwurzelte Verbindungen zur Stadt und ihren Menschen — in Räumen, in denen einst die Bäckerei seines Großvaters war.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Sana <span>Integralis</span></div>
+    <div class="footer-desc">Ganzheitliche Physiotherapie in Heidelberg-Handschuhsheim. Seit über 15 Jahren Ihr Partner für Gesundheit, Bewegung und Wohlbefinden.</div>
+  </div>
+  <div>
+    <div class="footer-h">Leistungen</div>
+    <ul class="footer-links">
+      <li><a href="#">Manuelle Therapie</a></li>
+      <li><a href="#">Krankengymnastik</a></li>
+      <li><a href="#">Beckenboden-Training</a></li>
+      <li><a href="#">Babymassage</a></li>
+      <li><a href="#">Personal Training</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-h">Kontakt</div>
+    <ul class="footer-links">
+      <li><a href="#">Steubenstraße 20, Heidelberg</a></li>
+      <li><a href="#">06221 / 599 76 40</a></li>
+      <li><a href="#">info@sanaintegralis.de</a></li>
+      <li><a href="#">Impressum</a></li>
+      <li><a href="#">Datenschutz</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 Sana Integralis · Heidelberg</span>
+  <span>Demo-Entwurf · Nicht veröffentlicht</span>
+</div>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const el = document.querySelector(a.getAttribute('href'));
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Nav shadow on scroll
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow = 
+    window.scrollY > 20 ? '0 4px 30px rgba(42,36,32,0.1)' : 'none';
+});
+
+// Form submit demo
+document.querySelector('.btn-book').addEventListener('click', () => {
+  alert('✅ Demo: Termin-Anfrage würde hier abgesendet werden!');
+});
+</script>
+
+</body>
+</html>
